@@ -27,14 +27,23 @@ public class MainActivity extends Activity {
 		
 		@Override
 		public void onClick(View v) {
-			String str=etMessage.getText().toString();
-			int num=Integer.parseInt(str);
-			if(num==myNumber){
-				Toast.makeText(MainActivity.this, "Bingo! Correct number.", Toast.LENGTH_SHORT).show();
-			}
-			else{
-				Toast.makeText(MainActivity.this, "Try again!", Toast.LENGTH_SHORT).show();
-			}
+			
+			
+				try{
+					String str=etMessage.getText().toString();
+					int num=Integer.parseInt(str);
+				if(num==myNumber){
+					Toast.makeText(MainActivity.this, "Bingo! Correct number.", Toast.LENGTH_SHORT).show();
+				}
+				else{
+					Toast.makeText(MainActivity.this, "Try again!", Toast.LENGTH_SHORT).show();
+				}
+			
+			
+				
+				}catch(Exception e){
+					Toast.makeText(MainActivity.this, "Wrong Input", Toast.LENGTH_SHORT).show();
+				}
 			// TODO Auto-generated method stub
 			
 		}
